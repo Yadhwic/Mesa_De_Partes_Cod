@@ -15,6 +15,8 @@ namespace Ménu_MesadePartes
         }
         private void btnConsulta_Click(object sender, EventArgs e)
         {
+            FrmConsulta frm = new FrmConsulta();
+            frm.ShowDialog();
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
