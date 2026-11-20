@@ -54,12 +54,10 @@ namespace Ménu_MesadePartes
         {
             for (int i = 0; i < cantidad; i++)
             {
-                if (codigos[i] == codigo)
-                {
+                string[] datos = lineas[i].Split('|');
+                if (datos[0].Trim().ToUpper() == codigo.ToUpper())
                     return true;
                 }
-            }
-
             return false;
         }
 
