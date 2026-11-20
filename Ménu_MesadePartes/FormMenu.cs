@@ -25,7 +25,8 @@ namespace Ménu_MesadePartes
 
         private void btnBúsqueda_Click(object sender, EventArgs e)
         {
-
+            FrmBusqueda frm = new FrmBusqueda();
+            frm.ShowDialog();
         }
     }
 }
