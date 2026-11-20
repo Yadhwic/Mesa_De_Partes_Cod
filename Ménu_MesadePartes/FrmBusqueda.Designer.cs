@@ -34,7 +34,8 @@
             btnBuscar = new Button();
             btnLimpiar = new Button();
             btnSalir = new Button();
-            grpResultado = new GroupBox();
+            label3 = new Label();
+            txtResultado = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -44,7 +45,7 @@
             label1.Location = new Point(156, 13);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(448, 50);
+            label1.Size = new Size(432, 48);
             label1.TabIndex = 0;
             label1.Text = "Busqueda de Expediente";
             // 
@@ -61,7 +62,7 @@
             // txtCodigoBuscar
             // 
             txtCodigoBuscar.Location = new Point(57, 134);
-            txtCodigoBuscar.Margin = new Padding(4, 4, 4, 4);
+            txtCodigoBuscar.Margin = new Padding(4);
             txtCodigoBuscar.Name = "txtCodigoBuscar";
             txtCodigoBuscar.Size = new Size(544, 29);
             txtCodigoBuscar.TabIndex = 2;
@@ -70,7 +71,7 @@
             // 
             btnBuscar.BackColor = Color.Moccasin;
             btnBuscar.Location = new Point(73, 209);
-            btnBuscar.Margin = new Padding(4, 4, 4, 4);
+            btnBuscar.Margin = new Padding(4);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(134, 57);
             btnBuscar.TabIndex = 3;
@@ -82,7 +83,7 @@
             // 
             btnLimpiar.BackColor = Color.PeachPuff;
             btnLimpiar.Location = new Point(255, 209);
-            btnLimpiar.Margin = new Padding(4, 4, 4, 4);
+            btnLimpiar.Margin = new Padding(4);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(125, 57);
             btnLimpiar.TabIndex = 4;
@@ -94,7 +95,7 @@
             // 
             btnSalir.BackColor = Color.IndianRed;
             btnSalir.Location = new Point(424, 209);
-            btnSalir.Margin = new Padding(4, 4, 4, 4);
+            btnSalir.Margin = new Padding(4);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(135, 57);
             btnSalir.TabIndex = 5;
@@ -102,32 +103,39 @@
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
-            // grpResultado
+            // label3
             // 
-            grpResultado.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            grpResultado.Location = new Point(73, 315);
-            grpResultado.Margin = new Padding(4, 4, 4, 4);
-            grpResultado.Name = "grpResultado";
-            grpResultado.Padding = new Padding(4, 4, 4, 4);
-            grpResultado.Size = new Size(508, 255);
-            grpResultado.TabIndex = 6;
-            grpResultado.TabStop = false;
-            grpResultado.Text = "Resultado de Busqueda";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12.096F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(57, 310);
+            label3.Name = "label3";
+            label3.Size = new Size(271, 30);
+            label3.TabIndex = 6;
+            label3.Text = "Resultado de la búsqueda:";
             // 
-            // Form1
+            // txtResultado
+            // 
+            txtResultado.Location = new Point(57, 364);
+            txtResultado.Multiline = true;
+            txtResultado.Name = "txtResultado";
+            txtResultado.Size = new Size(544, 245);
+            txtResultado.TabIndex = 7;
+            // 
+            // FrmBusqueda
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(671, 630);
-            Controls.Add(grpResultado);
+            Controls.Add(txtResultado);
+            Controls.Add(label3);
             Controls.Add(btnSalir);
             Controls.Add(btnLimpiar);
             Controls.Add(btnBuscar);
             Controls.Add(txtCodigoBuscar);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
-            Name = "Form1";
+            Margin = new Padding(4);
+            Name = "FrmBusqueda";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -141,6 +149,7 @@
         private Button btnBuscar;
         private Button btnLimpiar;
         private Button btnSalir;
-        private GroupBox grpResultado;
+        private Label label3;
+        private TextBox txtResultado;
     }
 }

@@ -44,15 +44,15 @@ namespace Ménu_MesadePartes
 
                 if (datos.Length == 6 && datos[0].Equals(codigoBuscado, StringComparison.OrdinalIgnoreCase))
                 {
-                    string resultado = "¡Expediente Encontrado!\n\n" +
-                                       "Código: " + datos[0] + "\n" +
-                                       "DNI: " + datos[1] + "\n" +
-                                       "Solicitante: " + datos[2] + "\n" +
-                                       "Tipo de Documento: " + datos[3] + "\n" +
-                                       "Asunto: " + datos[4] + "\n" +
+                    txtResultado.Text = "¡Expediente Encontrado!\r\n" +
+                                       "Código: " + datos[0] + "\r\n" +
+                                       "DNI: " + datos[1] + "\r\n" +
+                                       "Solicitante: " + datos[2] + "\r\n" +
+                                       "Tipo de Documento: " + datos[3] + "\r\n" +
+                                       "Asunto: " + datos[4] + "\r\n" +
                                        "Fecha: " + datos[5];
 
-                    MessageBox.Show(resultado, "Resultado de Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
 
                     encontrado = true;
                     break;
@@ -69,6 +69,7 @@ namespace Ménu_MesadePartes
         void limpiar()
         {
             txtCodigoBuscar.Clear();
+            txtResultado.Clear();
             txtCodigoBuscar.Focus();
         }
 
